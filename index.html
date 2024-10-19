@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Selection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .semester {
+            display: none; /* Hide all semesters by default */
+        }
+        .active {
+            display: block; /* Show the active semester */
+        }
+        button {
+            margin: 5px;
+        }
+        fieldset {
+            margin-bottom: 20px;
+        }
+        .submit-button {  
+        background-color: #4CAF50;  
+        color: #fff;  
+        padding: 10px 20px;  
+        border: none;  
+        border-radius: 5px;  
+        cursor: pointer;  
+      }  
+      .submit-button:hover {  
+        background-color: #3e8e41;  
+      }  
+    </style>
+    <link rel="stylesheet" href="styles.css">
+    <script src="server.js"></script>
+</head>
+<body>
+    <h1>Course Selection</h1>
+
+    <div>
+        <button onclick="showSemester('sem1')">Semester 1</button>
+        <button onclick="showSemester('sem2')">Semester 2</button>
+        <button onclick="showSemester('sem3')">Semester 3</button>
+        <button onclick="showSemester('sem4')">Semester 4</button>
+        <button onclick="showSemester('sem5')">Semester 5</button>
+        <button onclick="showSemester('sem6')">Semester 6</button>
+        <button onclick="showSemester('sem7')">Semester 7</button>
+        <button onclick="showSemester('sem8')">Semester 8</button>
+    </div>
+
+    <!-- Semester 1 -->
+    <div id="sem1" class="semester active">
+        <h2>Semester 1 Course Selection</h2>
+        <h3>Select Any 4 Theory Courses:</h3>
+        <fieldset>
+            <legend>Theory Courses:</legend>
+            <label>
+                <input type="checkbox" name="sem1_theory" value="Mathematics"> Mathematics
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher1">Dr. Smith (Rating: 4.5)</option>
+                    <option value="teacher2">Prof. Johnson (Rating: 4.8)</option>
+                </select>
+            </label><br>
+            <label>
+                <input type="checkbox" name="sem1_theory" value="Physics"> Physics
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher3">Dr. Brown (Rating: 4.6)</option>
+                    <option value="teacher4">Prof. Lee (Rating: 4.7)</option>
+                </select>
+            </label><br>
+            <label>
+                <input type="checkbox" name="sem1_theory" value="Chemistry"> Chemistry
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher5">Dr. Adams (Rating: 4.3)</option>
+                    <option value="teacher6">Prof. White (Rating: 4.4)</option>
+                </select>
+            </label><br>
+            <label>
+                <input type="checkbox" name="sem1_theory" value="Biology"> Biology
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher7">Dr. Green (Rating: 4.6)</option>
+                    <option value="teacher8">Prof. Black (Rating: 4.5)</option>
+                </select>
+            </label><br>
+            <label>
+                <input type="checkbox" name="sem3_theory" value="Computer Science"> Computer Science
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher17">Dr. Code (Rating: 4.7)</option>
+                    <option value="teacher18">Prof. Logic (Rating: 4.8)</option>
+                </select>
+            </label><br>
+        </fieldset>
+        <h3>Select Any 2 Lab Courses:</h3>
+        <fieldset>
+            <legend>Lab Courses:</legend>
+            <label>
+                <input type="checkbox" name="sem1_lab" value="Physics Lab"> Physics Lab
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher1">Dr. Smith (Rating: 4.5)</option>
+                    <option value="teacher3">Dr. Brown (Rating: 4.6)</option>
+                </select>
+            </label><br>
+            <label>
+                <input type="checkbox" name="sem1_lab" value="Chemistry Lab"> Chemistry Lab
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher2">Prof. Johnson (Rating: 4.8)</option>
+                    <option value="teacher4">Prof. Lee (Rating: 4.7)</option>
+                </select>
+            </label><br>
+            <label>
+                <input type="checkbox" name="sem8_lab" value="Project Lab"> Project Lab
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher61">Dr. Manage (Rating: 4.7)</option>
+                    <option value="teacher63">Dr. Advanced (Rating: 4.8)</option>
+                </select>
+            </label><br>
+        </fieldset>
+        <input type="submit" class="submit-button" value="submit">  
+    </div>
+
+    <!-- Semester 2 -->
+    <div id="sem2" class="semester">
+        <h2>Semester 2 Course Selection</h2>
+        <h3>Select Any 4 Theory Courses:</h3>
+        <fieldset>
+            <legend>Theory Courses:</legend>
+            <label>
+                <input type="checkbox" name="sem2_theory" value="Biology"> Biology
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher9">Dr. White (Rating: 4.2)</option>
+                    <option value="teacher10">Prof. Green (Rating: 4.9)</option>
+                </select>
+            </label><br>
+            <label>
+                <input type="checkbox" name="sem2_theory" value="Chemistry"> Chemistry
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher11">Dr. Blue (Rating: 4.1)</option>
+                    <option value="teacher12">Prof. Black (Rating: 4.3)</option>
+                </select>
+            </label><br>
+            <label>
+                <input type="checkbox" name="sem2_theory" value="Mathematics"> Mathematics
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher13">Dr. Gold (Rating: 4.5)</option>
+                    <option value="teacher14">Prof. Silver (Rating: 4.4)</option>
+                </select>
+            </label><br>
+            <label>
+                <input type="checkbox" name="sem2_theory" value="Statistics"> Statistics
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher15">Dr. Bronze (Rating: 4.6)</option>
+                    <option value="teacher16">Prof. Emerald (Rating: 4.8)</option>
+                </select>
+            </label><br>
+            <label>
+                <input type="checkbox" name="sem3_theory" value="Computer Science"> Computer Science
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher17">Dr. Code (Rating: 4.7)</option>
+                    <option value="teacher18">Prof. Logic (Rating: 4.8)</option>
+                </select>
+            </label><br>
+        </fieldset>
+        <h3>Select Any 2 Lab Courses:</h3>
+        <fieldset>
+            <legend>Lab Courses:</legend>
+            <label>
+                <input type="checkbox" name="sem2_lab" value="Biology Lab"> Biology Lab
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher9">Dr. White (Rating: 4.2)</option>
+                    <option value="teacher11">Dr. Blue (Rating: 4.1)</option>
+                </select>
+            </label><br>
+            <label>
+                <input type="checkbox" name="sem2_lab" value="Chemistry Lab"> Chemistry Lab
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher10">Prof. Green (Rating: 4.9)</option>
+                    <option value="teacher12">Prof. Black (Rating: 4.3)</option>
+                </select>
+            </label><br>
+            <label>
+                <input type="checkbox" name="sem8_lab" value="Project Lab"> Project Lab
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher61">Dr. Manage (Rating: 4.7)</option>
+                    <option value="teacher63">Dr. Advanced (Rating: 4.8)</option>
+                </select>
+            </label><br>
+        </fieldset>
+        <input type="submit" class="submit-button" value="submit">  
+    </div>
+
+    <!-- Semester 3 -->
+    <div id="sem3" class="semester">
+        <h2>Semester 3 Course Selection</h2>
+        <h3>Select Any 4 Theory Courses:</h3>
+        <fieldset>
+            <legend>Theory Courses:</legend>
+            <label>
+                <input type="checkbox" name="sem3_theory" value="Computer Science"> Computer Science
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher17">Dr. Code (Rating: 4.7)</option>
+                    <option value="teacher18">Prof. Logic (Rating: 4.8)</option>
+                </select>
+            </label><br>
+            <label>
+                <input type="checkbox" name="sem3_theory" value="Data Structures"> Data Structures
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher19">Dr. Data (Rating: 4.6)</option>
+                    <option value="teacher20">Prof. Algorithms (Rating: 4.9)</option>
+                </select>
+            </label><br>
+            <label>
+                <input type="checkbox" name="sem3_theory" value="Web Development"> Web Development
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher21">Dr. Web (Rating: 4.4)</option>
+                    <option value="teacher22">Prof. Design (Rating: 4.5)</option>
+                </select>
+            </label><br>
+            <label>
+                <input type="checkbox" name="sem3_theory" value="Operating Systems"> Operating Systems
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher23">Dr. Kernel (Rating: 4.3)</option>
+                    <option value="teacher24">Prof. Shell (Rating: 4.6)</option>
+                </select>
+            </label><br>
+            <label>
+                <input type="checkbox" name="sem3_theory" value="Computer Science"> Computer Science
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher17">Dr. Code (Rating: 4.7)</option>
+                    <option value="teacher18">Prof. Logic (Rating: 4.8)</option>
+                </select>
+            </label><br>
+        </fieldset>
+        <h3>Select Any 2 Lab Courses:</h3>
+        <fieldset>
+            <legend>Lab Courses:</legend>
+            <label>
+                <input type="checkbox" name="sem3_lab" value="CS Lab"> CS Lab
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher17">Dr. Code (Rating: 4.7)</option>
+                    <option value="teacher19">Dr. Data (Rating: 4.6)</option>
+                </select>
+            </label><br>
+            <label>
+                <input type="checkbox" name="sem3_lab" value="Web Lab"> Web Lab
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher18">Prof. Logic (Rating: 4.8)</option>
+                    <option value="teacher20">Prof. Algorithms (Rating: 4.9)</option>
+                </select>
+            </label><br>
+            <label>
+                <input type="checkbox" name="sem8_lab" value="Project Lab"> Project Lab
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher61">Dr. Manage (Rating: 4.7)</option>
+                    <option value="teacher63">Dr. Advanced (Rating: 4.8)</option>
+                </select>
+            </label><br>
+        </fieldset>
+        <input type="submit"  class="submit-button" value="submit">  
+    </div>
+
+    <!-- Semester 4 -->
+    <div id="sem4" class="semester">
+        <h2>Semester 4 Course Selection</h2>
+        <h3>Select Any 4 Theory Courses:</h3>
+        <fieldset>
+            <legend>Theory Courses:</legend>
+            <label>
+                <input type="checkbox" name="sem4_theory" value="Database Systems"> Database Systems
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher25">Dr. Query (Rating: 4.5)</option>
+                    <option value="teacher26">Prof. Schema (Rating: 4.7)</option>
+                </select>
+            </label><br>
+            <label>
+                <input type="checkbox" name="sem4_theory" value="Software Engineering"> Software Engineering
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher27">Dr. Agile (Rating: 4.6)</option>
+                    <option value="teacher28">Prof. Methodology (Rating: 4.8)</option>
+                </select>
+            </label><br>
+            <label>
+                <input type="checkbox" name="sem4_theory" value="Network Security"> Network Security
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher29">Dr. Secure (Rating: 4.9)</option>
+                    <option value="teacher30">Prof. Protect (Rating: 4.6)</option>
+                </select>
+            </label><br>
+            <label>
+                <input type="checkbox" name="sem4_theory" value="Artificial Intelligence"> Artificial Intelligence
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher31">Dr. Smart (Rating: 4.7)</option>
+                    <option value="teacher32">Prof. Brain (Rating: 4.8)</option>
+                </select>
+            </label><br>
+            <label>
+                <input type="checkbox" name="sem3_theory" value="Computer Science"> Computer Science
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher17">Dr. Code (Rating: 4.7)</option>
+                    <option value="teacher18">Prof. Logic (Rating: 4.8)</option>
+                </select>
+            </label><br>
+        </fieldset>
+        <h3>Select Any 2 Lab Courses:</h3>
+        <fieldset>
+            <legend>Lab Courses:</legend>
+            <label>
+                <input type="checkbox" name="sem4_lab" value="Database Lab"> Database Lab
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher25">Dr. Query (Rating: 4.5)</option>
+                    <option value="teacher27">Dr. Agile (Rating: 4.6)</option>
+                </select>
+            </label><br>
+            <label>
+                <input type="checkbox" name="sem4_lab" value="AI Lab"> AI Lab
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher29">Dr. Secure (Rating: 4.9)</option>
+                    <option value="teacher31">Dr. Smart (Rating: 4.7)</option>
+                </select>
+            </label><br>
+            <label>
+                <input type="checkbox" name="sem8_lab" value="Project Lab"> Project Lab
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher61">Dr. Manage (Rating: 4.7)</option>
+                    <option value="teacher63">Dr. Advanced (Rating: 4.8)</option>
+                </select>
+            </label><br>
+        </fieldset>
+        <input type="submit"  class="submit-button" value="submit">  
+    </div>
+
+    <!-- Semester 5 -->
+    <div id="sem5" class="semester">
+        <h2>Semester 5 Course Selection</h2>
+        <h3>Select Any 4 Theory Courses:</h3>
+        <fieldset>
+            <legend>Theory Courses:</legend>
+            <label>
+                <input type="checkbox" name="sem5_theory" value="Cloud Computing"> Cloud Computing
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher33">Dr. Cloud (Rating: 4.8)</option>
+                    <option value="teacher34">Prof. Sky (Rating: 4.7)</option>
+                </select>
+            </label><br>
+            <label>
+                <input type="checkbox" name="sem5_theory" value="Mobile App Development"> Mobile App Development
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher35">Dr. Mobile (Rating: 4.6)</option>
+                    <option value="teacher36">Prof. App (Rating: 4.9)</option>
+                </select>
+            </label><br>
+            <label>
+                <input type="checkbox" name="sem5_theory" value="Cyber Security"> Cyber Security
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher37">Dr. Protect (Rating: 4.7)</option>
+                    <option value="teacher38">Prof. Shield (Rating: 4.8)</option>
+                </select>
+            </label><br>
+            <label>
+                <input type="checkbox" name="sem5_theory" value="Human-Computer Interaction"> Human-Computer Interaction
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher39">Dr. User (Rating: 4.5)</option>
+                    <option value="teacher40">Prof. Interface (Rating: 4.6)</option>
+                </select>
+            </label><br>
+            <label>
+                <input type="checkbox" name="sem3_theory" value="Computer Science"> Computer Science
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher17">Dr. Code (Rating: 4.7)</option>
+                    <option value="teacher18">Prof. Logic (Rating: 4.8)</option>
+                </select>
+            </label><br>
+        </fieldset>
+        <h3>Select Any 2 Lab Courses:</h3>
+        <fieldset>
+            <legend>Lab Courses:</legend>
+            <label>
+                <input type="checkbox" name="sem5_lab" value="Cloud Lab"> Cloud Lab
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher33">Dr. Cloud (Rating: 4.8)</option>
+                    <option value="teacher35">Dr. Mobile (Rating: 4.6)</option>
+                </select>
+            </label><br>
+            <label>
+                <input type="checkbox" name="sem5_lab" value="Cyber Lab"> Cyber Lab
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher37">Dr. Protect (Rating: 4.7)</option>
+                    <option value="teacher39">Dr. User (Rating: 4.5)</option>
+                </select>
+            </label><br>
+            <label>
+                <input type="checkbox" name="sem8_lab" value="Project Lab"> Project Lab
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher61">Dr. Manage (Rating: 4.7)</option>
+                    <option value="teacher63">Dr. Advanced (Rating: 4.8)</option>
+                </select>
+            </label><br>
+        </fieldset>
+        <input type="submit"  class="submit-button" value="submit">  
+    </div>
+
+    <!-- Semester 6 -->
+    <div id="sem6" class="semester">
+        <h2>Semester 6 Course Selection</h2>
+        <h3>Select Any 4 Theory Courses:</h3>
+        <fieldset>
+            <legend>Theory Courses:</legend>
+            <label>
+                <input type="checkbox" name="sem6_theory" value="Big Data"> Big Data
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher41">Dr. Big (Rating: 4.6)</option>
+                    <option value="teacher42">Prof. Data (Rating: 4.8)</option>
+                </select>
+            </label><br>
+            <label>
+                <input type="checkbox" name="sem6_theory" value="Blockchain"> Blockchain
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher43">Dr. Chain (Rating: 4.7)</option>
+                    <option value="teacher44">Prof. Ledger (Rating: 4.9)</option>
+                </select>
+            </label><br>
+            <label>
+                <input type="checkbox" name="sem6_theory" value="DevOps"> DevOps
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher45">Dr. Ops (Rating: 4.5)</option>
+                    <option value="teacher46">Prof. Continuous (Rating: 4.8)</option>
+                </select>
+            </label><br>
+            <label>
+                <input type="checkbox" name="sem6_theory" value="Virtualization"> Virtualization
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher47">Dr. Virtue (Rating: 4.6)</option>
+                    <option value="teacher48">Prof. Cloud (Rating: 4.7)</option>
+                </select>
+            </label><br>
+            <label>
+                <input type="checkbox" name="sem3_theory" value="Computer Science"> Computer Science
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher17">Dr. Code (Rating: 4.7)</option>
+                    <option value="teacher18">Prof. Logic (Rating: 4.8)</option>
+                </select>
+            </label><br>
+        </fieldset>
+        <h3>Select Any 2 Lab Courses:</h3>
+        <fieldset>
+            <legend>Lab Courses:</legend>
+            <label>
+                <input type="checkbox" name="sem6_lab" value="Big Data Lab"> Big Data Lab
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher41">Dr. Big (Rating: 4.6)</option>
+                    <option value="teacher43">Dr. Chain (Rating: 4.7)</option>
+                </select>
+            </label><br>
+            <label>
+                <input type="checkbox" name="sem6_lab" value="DevOps Lab"> DevOps Lab
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher45">Dr. Ops (Rating: 4.5)</option>
+                    <option value="teacher47">Dr. Virtue (Rating: 4.6)</option>
+                </select>
+            </label><br>
+            <label>
+                <input type="checkbox" name="sem8_lab" value="Project Lab"> Project Lab
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher61">Dr. Manage (Rating: 4.7)</option>
+                    <option value="teacher63">Dr. Advanced (Rating: 4.8)</option>
+                </select>
+            </label><br>
+        </fieldset>
+        <input type="submit" value="submit">  
+    </div>
+
+    <!-- Semester 7 -->
+    <div id="sem7" class="semester">
+        <h2>Semester 7 Course Selection</h2>
+        <h3>Select Any 4 Theory Courses:</h3>
+        <fieldset>
+            <legend>Theory Courses:</legend>
+            <label>
+                <input type="checkbox" name="sem7_theory" value="Machine Learning"> Machine Learning
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher49">Dr. Learn (Rating: 4.7)</option>
+                    <option value="teacher50">Prof. AI (Rating: 4.8)</option>
+                </select>
+            </label><br>
+            <label>
+                <input type="checkbox" name="sem7_theory" value="Data Mining"> Data Mining
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher51">Dr. Mine (Rating: 4.6)</option>
+                    <option value="teacher52">Prof. Extract (Rating: 4.9)</option>
+                </select>
+            </label><br>
+            <label>
+                <input type="checkbox" name="sem7_theory" value="Internet of Things"> Internet of Things
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher53">Dr. IoT (Rating: 4.7)</option>
+                    <option value="teacher54">Prof. Connect (Rating: 4.8)</option>
+                </select>
+            </label><br>
+            <label>
+                <input type="checkbox" name="sem7_theory" value="Ethical Hacking"> Ethical Hacking
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher55">Dr. Hack (Rating: 4.5)</option>
+                    <option value="teacher56">Prof. Shield (Rating: 4.6)</option>
+                </select>
+            </label><br>
+            <label>
+                <input type="checkbox" name="sem3_theory" value="Computer Science"> Computer Science
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher17">Dr. Code (Rating: 4.7)</option>
+                    <option value="teacher18">Prof. Logic (Rating: 4.8)</option>
+                </select>
+            </label><br>
+        </fieldset>
+        <h3>Select Any 2 Lab Courses:</h3>
+        <fieldset>
+            <legend>Lab Courses:</legend>
+            <label>
+                <input type="checkbox" name="sem7_lab" value="ML Lab"> ML Lab
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher49">Dr. Learn (Rating: 4.7)</option>
+                    <option value="teacher51">Dr. Mine (Rating: 4.6)</option>
+                </select>
+            </label><br>
+            <label>
+                <input type="checkbox" name="sem7_lab" value="IoT Lab"> IoT Lab
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher53">Dr. IoT (Rating: 4.7)</option>
+                    <option value="teacher55">Dr. Hack (Rating: 4.5)</option>
+                </select>
+            </label><br>
+            <label>
+                <input type="checkbox" name="sem8_lab" value="Project Lab"> Project Lab
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher61">Dr. Manage (Rating: 4.7)</option>
+                    <option value="teacher63">Dr. Advanced (Rating: 4.8)</option>
+                </select>
+            </label><br>
+        </fieldset>
+        <input type="submit"  class="submit-button" value="submit">  
+    </div>
+
+    <!-- Semester 8 -->
+    <div id="sem8" class="semester">
+        <h2>Semester 8 Course Selection</h2>
+        <h3>Select Any 4 Theory Courses:</h3>
+        <fieldset>
+            <legend>Theory Courses:</legend>
+            <label>
+                <input type="checkbox" name="sem8_theory" value="Capstone Project"> Capstone Project
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher57">Dr. Final (Rating: 4.8)</option>
+                    <option value="teacher58">Prof. Project (Rating: 4.9)</option>
+                </select>
+            </label><br>
+            <label>
+                <input type="checkbox" name="sem8_theory" value="Research Methods"> Research Methods
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher59">Dr. Research (Rating: 4.6)</option>
+                    <option value="teacher60">Prof. Study (Rating: 4.8)</option>
+                </select>
+            </label><br>
+            <label>
+                <input type="checkbox" name="sem8_theory" value="Project Management"> Project Management
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher61">Dr. Manage (Rating: 4.7)</option>
+                    <option value="teacher62">Prof. Control (Rating: 4.9)</option>
+                </select>
+                
+            </label><br>
+            <label>
+                <input type="checkbox" name="sem8_theory" value="Advanced Topics in CS"> Advanced Topics in CS
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher63">Dr. Advanced (Rating: 4.8)</option>
+                    <option value="teacher64">Prof. Special (Rating: 4.7)</option>
+                </select>
+            </label><br>
+            <label>
+                <input type="checkbox" name="sem3_theory" value="Computer Science"> Computer Science
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher17">Dr. Code (Rating: 4.7)</option>
+                    <option value="teacher18">Prof. Logic (Rating: 4.8)</option>
+                </select>
+            </label><br>
+        </fieldset>
+        <h3>Select Any 2 Lab Courses:</h3>
+        <fieldset>
+            <legend>Lab Courses:</legend>
+            <label>
+                <input type="checkbox" name="sem8_lab" value="Capstone Lab"> Capstone Lab
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher57">Dr. Final (Rating: 4.8)</option>
+                    <option value="teacher59">Dr. Research (Rating: 4.6)</option>
+                </select>
+            </label><br>
+            <label>
+                <input type="checkbox" name="sem8_lab" value="Project Lab"> Project Lab
+                <select>
+                    <option value="">Select Teacher</option>
+                    <option value="teacher61">Dr. Manage (Rating: 4.7)</option>
+                    <option value="teacher63">Dr. Advanced (Rating: 4.8)</option>
+                </select>
+            </label><br>
+        </fieldset>
+        <input type="submit" class="submit-button" value="submit">  
+    </div>
+    <section class="Feedback-Selection">
+        <h2>Submit Feedback</h2>
+        <textarea id="FeedbackText" placeholder="Write your feedback"></textarea>
+        <button onclick="submitFeedback()">Submit Feedback</button>
+    </section>
+
+    <script>
+        function showSemester(sem) {
+            // Hide all semesters
+            const semesters = document.querySelectorAll('.semester');
+            semesters.forEach(semester => {
+                semester.classList.remove('active');
+            });
+            // Show the selected semester
+            document.getElementById(sem).classList.add('active');
+        }
+    </script>
+</body>
+</html>

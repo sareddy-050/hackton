@@ -1,0 +1,146 @@
+/* Global Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #2C3E50;
+    font-size: 2.5rem;
+}
+
+h2 {
+    color: #2980B9;
+    font-size: 1.75rem;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    margin-top: 40px;
+}
+
+h3 {
+    color: #E74C3C;
+    font-size: 1.5rem;
+}
+
+/* Form Styles */
+form {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+select, input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    transition: border 0.3s;
+}
+
+select:focus {
+    border-color: #2980B9;
+    outline: none;
+}
+
+input[type="checkbox"] {
+    transform: scale(1.2);
+    margin-right: 15px;
+}
+
+/* Fieldset and Legend */
+fieldset {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fafafa;
+}
+
+legend {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0 10px;
+    color: #2C3E50;
+}
+
+/* Button Styles */
+button {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 1rem;
+    background-color: #3498DB;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    background-color: #2980B9;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Feedback Button Special Style */
+button[type="button"] {
+    background-color: #E74C3C;
+}
+
+button[type="button"]:hover {
+    background-color: #C0392B;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    select {
+        padding: 8px;
+    }
+
+    button {
+        width: 100%;
+        padding: 15px;
+    }
+}
